@@ -1,3 +1,13 @@
+# Terraform configuration
+terraform {
+  backend "remote" {
+    organization = "epam092020"
+    workspaces {
+      name = "epam-gcp-template-gce"
+    }
+  }
+}
+
 variable "gcp_project" {
   description = "my GCP project"
 }
